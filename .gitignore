@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Claude Code
+.claude/
+launch.json
+
+# Design handoff bundles
+design_bundle/
+design_extract/
+
+# Large static assets (covers fetched via fetch-data.mjs)
+# public/covers/
+
+# Raw fetched data before enrichment
+public/data/release-groups.json

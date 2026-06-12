@@ -1,0 +1,458 @@
+{
+  "isnis": [],
+  "sort-name": "death’s dynamic shroud",
+  "country": "US",
+  "begin-area": {
+    "type-id": null,
+    "iso-3166-1-codes": [
+      "US"
+    ],
+    "id": "489ce91b-6658-3307-9877-795b68554c98",
+    "type": null,
+    "name": "United States",
+    "disambiguation": "",
+    "sort-name": "United States"
+  },
+  "name": "death’s dynamic shroud",
+  "disambiguation": "vaporwave",
+  "area": {
+    "type": null,
+    "id": "489ce91b-6658-3307-9877-795b68554c98",
+    "iso-3166-1-codes": [
+      "US"
+    ],
+    "type-id": null,
+    "sort-name": "United States",
+    "disambiguation": "",
+    "name": "United States"
+  },
+  "gender": null,
+  "genres": [
+    {
+      "id": "e837fa08-f314-428f-af96-ceed9858e3b2",
+      "count": 3,
+      "name": "vaporwave",
+      "disambiguation": ""
+    }
+  ],
+  "gender-id": null,
+  "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+  "relations": [
+    {
+      "attribute-values": {},
+      "target-credit": "",
+      "attributes": [],
+      "direction": "backward",
+      "begin": null,
+      "type-id": "5be4c609-9afa-4ea0-910b-12ffb71e3821",
+      "artist": {
+        "type": "Person",
+        "id": "466f84bc-0775-47b7-8b33-b84236f947f2",
+        "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+        "sort-name": "Honors, Tech",
+        "disambiguation": "",
+        "name": "Tech Honors",
+        "country": "US"
+      },
+      "attribute-ids": {},
+      "end": null,
+      "ended": false,
+      "target-type": "artist",
+      "source-credit": "",
+      "type": "member of band"
+    },
+    {
+      "type": "member of band",
+      "source-credit": "",
+      "end": null,
+      "ended": false,
+      "target-type": "artist",
+      "attribute-ids": {},
+      "artist": {
+        "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+        "id": "004fc9d2-0bd2-42a1-a6b8-bcb3445dd92b",
+        "type": "Person",
+        "disambiguation": "",
+        "country": "US",
+        "name": "Keith Rankin",
+        "sort-name": "Rankin, Keith"
+      },
+      "type-id": "5be4c609-9afa-4ea0-910b-12ffb71e3821",
+      "begin": null,
+      "target-credit": "",
+      "attributes": [],
+      "direction": "backward",
+      "attribute-values": {}
+    },
+    {
+      "ended": false,
+      "target-type": "artist",
+      "end": null,
+      "type": "member of band",
+      "source-credit": "",
+      "attribute-ids": {},
+      "type-id": "5be4c609-9afa-4ea0-910b-12ffb71e3821",
+      "begin": null,
+      "artist": {
+        "sort-name": "Webster, James",
+        "country": null,
+        "name": "James Webster",
+        "disambiguation": "electronic musician",
+        "type": "Person",
+        "id": "c5bd2e33-ab71-47b6-9fbf-e099dd31bfbd",
+        "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+      },
+      "attribute-values": {},
+      "attributes": [],
+      "direction": "backward",
+      "target-credit": ""
+    },
+    {
+      "type": "named after artist",
+      "source-credit": "",
+      "end": null,
+      "ended": false,
+      "target-type": "artist",
+      "attribute-ids": {},
+      "artist": {
+        "sort-name": "death's dynamic shroud.avi",
+        "disambiguation": "",
+        "name": "death's dynamic shroud.avi",
+        "country": null,
+        "type": null,
+        "id": "a6d3a65e-d3a8-41b1-ab1c-858874e046ab",
+        "type-id": null
+      },
+      "begin": null,
+      "type-id": "1af24726-5b1f-4b07-826e-5351723f504b",
+      "target-credit": "",
+      "direction": "backward",
+      "attributes": [],
+      "attribute-values": {}
+    },
+    {
+      "end": null,
+      "ended": false,
+      "target-type": "artist",
+      "type": "named after artist",
+      "source-credit": "",
+      "attribute-ids": {},
+      "begin": null,
+      "type-id": "1af24726-5b1f-4b07-826e-5351723f504b",
+      "artist": {
+        "disambiguation": "Helluva Boss-themed parody of death's dynamic shroud",
+        "country": null,
+        "name": "loona's dynamic shroud",
+        "sort-name": "loona's dynamic shroud",
+        "type-id": null,
+        "id": "978913c1-ed67-4f70-a625-a5e2f2190ac7",
+        "type": null
+      },
+      "attribute-values": {},
+      "target-credit": "",
+      "attributes": [],
+      "direction": "backward"
+    },
+    {
+      "type-id": "c550166e-0548-4a18-b1d4-e2ae423a3e88",
+      "begin": null,
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "attribute-values": {},
+      "url": {
+        "id": "cff773a9-594e-4864-9aa1-97b75cb0f3b1",
+        "resource": "https://deathsdynamicshroud.bandcamp.com/"
+      },
+      "type": "bandcamp",
+      "source-credit": "",
+      "end": null,
+      "ended": false,
+      "target-type": "url",
+      "attribute-ids": {}
+    },
+    {
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "url": {
+        "resource": "https://www.discogs.com/artist/4096751",
+        "id": "0224b93c-6634-4557-aa13-c49fb9113b94"
+      },
+      "attribute-values": {},
+      "begin": null,
+      "type-id": "04a5b104-a4c2-4bac-99a1-7b837c37d9e4",
+      "attribute-ids": {},
+      "type": "discogs",
+      "source-credit": "",
+      "ended": false,
+      "target-type": "url",
+      "end": null
+    },
+    {
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "attribute-values": {},
+      "url": {
+        "id": "feae1cb4-1bc9-4923-b3fd-d65ab06d6d00",
+        "resource": "https://open.spotify.com/artist/0ki6cPiOOykzNAbI5UfQcC"
+      },
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "begin": null,
+      "attribute-ids": {},
+      "type": "free streaming",
+      "source-credit": "",
+      "end": null,
+      "target-type": "url",
+      "ended": false
+    },
+    {
+      "begin": null,
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "url": {
+        "id": "02524cab-75e6-4f1b-9475-df4cab9f3b0b",
+        "resource": "https://open.spotify.com/artist/1F31FB7Y6ic4844PbqMf7c"
+      },
+      "attribute-values": {},
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "target-type": "url",
+      "ended": false,
+      "end": null,
+      "source-credit": "",
+      "type": "free streaming",
+      "attribute-ids": {}
+    },
+    {
+      "attribute-ids": {},
+      "source-credit": "",
+      "type": "free streaming",
+      "end": null,
+      "target-type": "url",
+      "ended": false,
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "attribute-values": {},
+      "url": {
+        "resource": "https://www.deezer.com/artist/13537803",
+        "id": "c3824ba2-0207-4438-8cf1-f9c2ad167783"
+      },
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "begin": null
+    },
+    {
+      "attribute-values": {},
+      "url": {
+        "resource": "https://www.deezer.com/artist/6722543",
+        "id": "d3d629f6-68db-4eab-ab95-e71491f9675f"
+      },
+      "target-credit": "",
+      "direction": "forward",
+      "attributes": [],
+      "begin": null,
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "attribute-ids": {},
+      "end": null,
+      "ended": false,
+      "target-type": "url",
+      "type": "free streaming",
+      "source-credit": ""
+    },
+    {
+      "source-credit": "",
+      "type": "image",
+      "end": null,
+      "target-type": "url",
+      "ended": false,
+      "attribute-ids": {},
+      "type-id": "221132e9-e30e-43f2-a741-15afc4c5fa7c",
+      "begin": null,
+      "target-credit": "",
+      "direction": "forward",
+      "attributes": [],
+      "attribute-values": {},
+      "url": {
+        "resource": "https://commons.wikimedia.org/wiki/File:DDS-Electronicon2023.jpg",
+        "id": "41100318-9982-4699-963a-9e103a7e88ed"
+      }
+    },
+    {
+      "attribute-ids": {},
+      "source-credit": "",
+      "type": "last.fm",
+      "end": null,
+      "target-type": "url",
+      "ended": false,
+      "target-credit": "",
+      "direction": "forward",
+      "attributes": [],
+      "attribute-values": {},
+      "url": {
+        "resource": "https://www.last.fm/music/death%E2%80%99s+dynamic+shroud",
+        "id": "bcf9be46-4a89-43df-8f89-afcba4029679"
+      },
+      "type-id": "08db8098-c0df-4b78-82c3-c8697b4bba7f",
+      "begin": null
+    },
+    {
+      "begin": null,
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "attribute-values": {},
+      "url": {
+        "id": "c79f6c87-a81d-43cb-b269-bd5e18f3b5f2",
+        "resource": "https://rateyourmusic.com/artist/deaths_dynamic_shroud_wmv"
+      },
+      "target-credit": "",
+      "direction": "forward",
+      "attributes": [],
+      "end": null,
+      "ended": false,
+      "target-type": "url",
+      "source-credit": "",
+      "type": "other databases",
+      "attribute-ids": {}
+    },
+    {
+      "type": "purchase for download",
+      "source-credit": "",
+      "target-type": "url",
+      "ended": false,
+      "end": null,
+      "attribute-ids": {},
+      "begin": null,
+      "type-id": "f8319a2f-f824-4617-81c8-be6560b3b203",
+      "attributes": [],
+      "direction": "forward",
+      "target-credit": "",
+      "url": {
+        "id": "14a5a02f-f0cf-408e-b4ab-c47cadad4cfc",
+        "resource": "https://itunes.apple.com/us/artist/id1312038847"
+      },
+      "attribute-values": {}
+    },
+    {
+      "type": "social network",
+      "source-credit": "",
+      "end": null,
+      "target-type": "url",
+      "ended": false,
+      "attribute-ids": {},
+      "begin": null,
+      "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+      "target-credit": "",
+      "direction": "forward",
+      "attributes": [],
+      "attribute-values": {},
+      "url": {
+        "resource": "https://twitter.com/ddsnuwrld",
+        "id": "ac8556d8-57ba-42e4-b74d-9ef4f2d6275b"
+      }
+    },
+    {
+      "begin": null,
+      "type-id": "63cc5d1f-f096-4c94-a43f-ecb32ea94161",
+      "url": {
+        "resource": "https://music.apple.com/gb/artist/921051627",
+        "id": "f0349e67-4977-4c1a-b1d9-2cf9e9e8258e"
+      },
+      "attribute-values": {},
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "ended": false,
+      "target-type": "url",
+      "end": null,
+      "type": "streaming",
+      "source-credit": "",
+      "attribute-ids": {}
+    },
+    {
+      "begin": null,
+      "type-id": "63cc5d1f-f096-4c94-a43f-ecb32ea94161",
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "url": {
+        "id": "ce5c0b58-98d4-45fe-bbf6-7589d3aff8cf",
+        "resource": "https://music.apple.com/us/artist/1312038847"
+      },
+      "attribute-values": {},
+      "type": "streaming",
+      "source-credit": "",
+      "target-type": "url",
+      "ended": false,
+      "end": null,
+      "attribute-ids": {}
+    },
+    {
+      "ended": false,
+      "target-type": "url",
+      "end": null,
+      "source-credit": "",
+      "type": "streaming",
+      "attribute-ids": {},
+      "begin": null,
+      "type-id": "63cc5d1f-f096-4c94-a43f-ecb32ea94161",
+      "url": {
+        "resource": "https://tidal.com/artist/9271605",
+        "id": "28698ae3-22af-4b1e-9241-c093a79e6f42"
+      },
+      "attribute-values": {},
+      "attributes": [],
+      "direction": "forward",
+      "target-credit": ""
+    },
+    {
+      "begin": null,
+      "type-id": "689870a4-a1e4-4912-b17f-7b2664215698",
+      "url": {
+        "resource": "https://www.wikidata.org/wiki/Q110880366",
+        "id": "796cf4b3-5ad4-4e46-9708-0d9eb2e7c047"
+      },
+      "attribute-values": {},
+      "attributes": [],
+      "direction": "forward",
+      "target-credit": "",
+      "ended": false,
+      "target-type": "url",
+      "end": null,
+      "source-credit": "",
+      "type": "wikidata",
+      "attribute-ids": {}
+    }
+  ],
+  "life-span": {
+    "end": null,
+    "begin": "2014",
+    "ended": false
+  },
+  "end-area": null,
+  "ipis": [],
+  "type": "Group",
+  "id": "e294d11b-fc47-41a9-b38b-3205c34d17ba",
+  "tags": [
+    {
+      "count": 1,
+      "name": "ex-sillyname"
+    },
+    {
+      "name": "file/path",
+      "count": 1
+    },
+    {
+      "count": 1,
+      "name": "has bandcamp subscription"
+    },
+    {
+      "name": "vaporwave",
+      "count": 3
+    }
+  ],
+  "rating": {
+    "value": null,
+    "votes-count": 0
+  }
+}
