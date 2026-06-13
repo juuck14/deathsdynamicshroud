@@ -16,9 +16,9 @@ function fmtDate(d) {
 }
 
 const PRODUCER_COLOR = {
-  "James Webster": "oklch(0.70 0.23 352)",
-  "Tech Honors": "oklch(0.76 0.18 200)",
-  "Keith Rankin": "oklch(0.85 0.17 95)",
+  "James Webster": "var(--cyan)",
+  "Tech Honors":   "var(--magenta)",
+  "Keith Rankin":  "var(--gold)",
 };
 
 export default function AlbumDetail({ id, navigate }) {
@@ -58,7 +58,7 @@ export default function AlbumDetail({ id, navigate }) {
           <div className="album-cover">
             <GlitchCover album={album} eager />
             <div className="ac-meta">
-              <span>{catS}</span>
+              <span>{album._cat}</span>
               <span>{album.cover ? "COVER ART ARCHIVE" : "NO ARTWORK"}</span>
             </div>
           </div>
@@ -76,6 +76,7 @@ export default function AlbumDetail({ id, navigate }) {
 
             <div className="album-facts">
               <div className="fact"><div className="k">Released</div><div className="v">{album.firstReleaseDate ? fmtDate(album.firstReleaseDate) : "—"}</div></div>
+              <div className="fact"><div className="k">Catalogue</div><div className="v serif">{album._cat || "—"}</div></div>
               <div className="fact"><div className="k">Format</div><div className="v">{album.category}</div></div>
               <div className="fact"><div className="k">Primary genre</div><div className="v">{album.primaryGenre || "—"}</div></div>
             </div>

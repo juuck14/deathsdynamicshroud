@@ -133,7 +133,7 @@ export default function Home({ navigate }) {
                 <GlitchCover album={featured} eager />
               </div>
               <div className="hero-feat-meta">
-                <span className="mono-cat mono">{CAT_SHORT[featured.category]}</span>
+                <span className="mono-cat mono">{featured._cat} · {CAT_SHORT[featured.category]}</span>
                 <span className="mono-title mono">{featured.title}</span>
                 <span className="mono-date mono">{fmtDate(featured.firstReleaseDate)} — DEFINING STATEMENT</span>
               </div>
@@ -160,7 +160,7 @@ export default function Home({ navigate }) {
         <section className="stature fade-up">
           <div className="wrap">
             <div className="stature-grid">
-              <div className="stature-num serif chrome-text">{String(albums.length).padStart(3, "0")}</div>
+              <div className="stature-num serif">{String(albums.length).padStart(3, "0")}</div>
               <div className="stature-copy">
                 <div className="kicker">ON SCALE</div>
                 <p className="serif" style={{ fontSize: "clamp(22px, 2.6vw, 38px)", lineHeight: 1.28, margin: "14px 0 0", color: "var(--bone)", maxWidth: "26ch" }}>

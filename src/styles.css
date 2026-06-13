@@ -4,19 +4,21 @@
 
 :root {
   --void: #060509;
-  --void-2: #0d0b12;
-  --ink: #151020;
+  --void-2: #0a0810;
+  --ink: #100c1a;
+  --ink-2: #16101f;
   --bone: #ece6dd;
-  --bone-dim: rgba(236,230,221,0.55);
-  --bone-faint: rgba(236, 230, 221, 0.48);
-  --line: rgba(236,230,221,0.08);
-  --line-strong: rgba(236,230,221,0.18);
+  --bone-dim: #9a93a6;
+  --bone-faint: #6a6377;
+  --line: rgba(236, 230, 221, 0.13);
+  --line-soft: rgba(236, 230, 221, 0.07);
+  --line-strong: rgba(236, 230, 221, 0.30);
   --magenta: oklch(0.70 0.23 352);
   --magenta-dim: oklch(0.70 0.23 352 / 0.35);
   --cyan: oklch(0.85 0.15 200);
   --gold: oklch(0.85 0.17 95);
-  --chrome: linear-gradient(135deg, #fff 0%, #aaa 30%, #fff 60%, #999 100%);
-  --prism: linear-gradient(135deg, oklch(0.70 0.23 352), oklch(0.85 0.15 200), oklch(0.85 0.17 95));
+  --chrome: linear-gradient(168deg, #fff 0%, #c8c2d4 26%, #8e8aa0 48%, #f4f0fb 60%, #b9b3c8 78%, #7c7790 100%);
+  --prism: linear-gradient(100deg, #ff4fa3, #ffd36e, #8effc6, #5fe0e8, #9b7bff, #ff4fa3);
   --nav-h: 58px;
   --font-display: 'Bodoni Moda', Georgia, serif;
   --font-grotesk: 'Space Grotesk', system-ui, sans-serif;
@@ -50,11 +52,12 @@ img { display: block; }
 }
 .scan {
   position: fixed; inset: 0; z-index: 499; pointer-events: none;
-  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  opacity: 0.35;
+  background: repeating-linear-gradient(180deg, transparent 0 2px, rgba(0,0,0,0.22) 2px 3px);
 }
 .vignette {
   position: fixed; inset: 0; z-index: 498; pointer-events: none;
-  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(6,5,9,0.65) 100%);
+  background: radial-gradient(120% 80% at 50% 0%, transparent 50%, rgba(0,0,0,0.55) 100%);
 }
 
 /* ── Custom cursor ── */
@@ -242,6 +245,52 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 @media (max-width: 900px) { .nav-prog { display: none; } }
 @media (max-width: 600px) { .nav-link { padding: 8px 9px; font-size: 10px; } }
 
+/* ── GitHub icon link ── */
+.nav-gh {
+  display: flex; align-items: center; color: var(--bone-dim);
+  transition: color .15s; flex-shrink: 0;
+}
+.nav-gh:hover { color: var(--bone); }
+
+/* ── Hamburger button (mobile only) ── */
+.nav-burger {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 36px; height: 36px; padding: 6px; background: none; border: none;
+  cursor: pointer; flex-shrink: 0;
+}
+.nav-burger span {
+  display: block; height: 1px; background: var(--bone-dim);
+  transition: transform .2s, opacity .2s, width .2s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); background: var(--bone); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); background: var(--bone); }
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+}
+
+/* ── Mobile nav drawer ── */
+.nav-mobile {
+  display: flex; flex-direction: column;
+  background: rgba(6,5,9,0.97); border-top: 1px solid var(--line);
+  padding: 8px 0 16px;
+}
+.nav-mobile-link {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--bone-dim);
+  padding: 14px 20px; background: none; border: none; cursor: pointer;
+  text-align: left; transition: color .15s, background .15s;
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-mobile-link:last-of-type { border-bottom: none; }
+.nav-mobile-link:hover, .nav-mobile-link.active { color: var(--bone); background: rgba(236,230,221,0.03); }
+.nav-mobile-link.active { color: var(--magenta); }
+.nav-mobile-prog {
+  font-size: 10px; letter-spacing: 0.12em; color: var(--bone-faint);
+  padding: 12px 20px 0; text-transform: uppercase;
+}
+
 /* ── Footer ── */
 .foot { border-top: 1px solid var(--line); margin-top: 120px; padding: 64px 0 80px; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
@@ -388,7 +437,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 /* ============================================================
    ARCHIVE
    ============================================================ */
-.archive-head { padding: 56px 0 0; }
+.archive-head { padding-top: 56px; }
 .ah-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .ah-title {
   font-family: var(--font-grotesk); font-weight: 700; letter-spacing: -0.03em;
@@ -406,7 +455,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
   margin-top: 40px;
 }
 .controls-in { display: flex; gap: 16px; align-items: center; padding: 16px 0; flex-wrap: wrap; }
-.search-wrap { flex: 1; min-width: 220px; position: relative; }
+.search-wrap { flex: 1; min-width: 180px; position: relative; }
 .search {
   width: 100%; background: var(--void-2); border: 1px solid var(--line); color: var(--bone);
   font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
@@ -437,7 +486,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 .catchip .c { opacity: .6; }
 .catchip.on .c { opacity: .9; }
 
-.archive-body { padding: 40px 0 0; }
+.archive-body { padding-top: 40px; }
 .grp { margin-bottom: 64px; }
 .grp-head { display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 24px; }
 .grp-head h3 { font-size: clamp(22px, 3vw, 36px); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
@@ -445,6 +494,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 .grp-head .gc { font-family: var(--font-mono); font-size: 11px; color: var(--magenta); border: 1px solid color-mix(in oklch, var(--magenta), transparent 60%); border-radius: 999px; padding: 2px 9px; }
 
 .arc-grid { display: grid; gap: 4px; grid-template-columns: repeat(auto-fill, minmax(208px, 1fr)); }
+@media (max-width: 480px) { .arc-grid { grid-template-columns: repeat(2, 1fr); } }
 .arc-card {
   position: relative; background: var(--void-2); border: 1px solid var(--line);
   cursor: pointer; transition: border-color .2s, background .2s;
@@ -467,7 +517,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 /* ============================================================
    ALBUM DETAIL
    ============================================================ */
-.album { padding: 50px 0 0; }
+.album { padding-top: 50px; }
 .back {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--bone-dim); cursor: pointer; background: none; border: none; padding: 0; margin-bottom: 40px;
@@ -522,7 +572,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 /* ============================================================
    ABOUT / COLLECTIVE
    ============================================================ */
-.about { padding: 56px 0 0; }
+.about { padding-top: 56px; }
 .about-hero { border-bottom: 1px solid var(--line); padding-bottom: 56px; margin-bottom: 56px; }
 .about-title { font-weight: 700; letter-spacing: -0.03em; font-size: clamp(48px, 10vw, 150px); line-height: .85; margin: 18px 0 0; }
 .about-lead { font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 34px); line-height: 1.32; max-width: 24ch; margin: 40px 0 0; color: var(--bone); }
@@ -572,7 +622,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 /* ============================================================
    PRODUCER MAP / VENN
    ============================================================ */
-.producers { padding: 56px 0 0; }
+.producers { padding-top: 56px; }
 .producers .ah-row { margin-bottom: 40px; }
 .venn-legend { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
 .vleg {
@@ -650,7 +700,7 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 /* ============================================================
    COLLECTION / TIER LIST
    ============================================================ */
-.collection { padding: 56px 0 0; }
+.collection { padding-top: 56px; }
 .collection .ah-row { margin-bottom: 44px; align-items: center; }
 .coll-prog { min-width: 240px; }
 .cp-row { display: flex; align-items: baseline; gap: 10px; }

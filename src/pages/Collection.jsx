@@ -6,12 +6,12 @@ import { useTierList } from "../useTierList.js";
 const BASE = import.meta.env.BASE_URL;
 
 const TIERS = [
-  { id: "S", color: "#ff4d4d" },
-  { id: "A", color: "#ff9f40" },
-  { id: "B", color: "#ffe566" },
-  { id: "C", color: "#7be87b" },
-  { id: "D", color: "#38e8ff" },
-  { id: "F", color: "#a98fd6" },
+  { id: "S", color: "#ff4f7a" },
+  { id: "A", color: "#ff9f5a" },
+  { id: "B", color: "var(--gold)" },
+  { id: "C", color: "#7be8a0" },
+  { id: "D", color: "var(--cyan)" },
+  { id: "F", color: "#8b8496" },
 ];
 
 export default function Collection({ navigate }) {

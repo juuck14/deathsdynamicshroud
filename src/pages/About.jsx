@@ -1,43 +1,52 @@
 import { useMemo } from "react";
 import { useData } from "../useData.js";
+import { useReveal } from "../useReveal.js";
 
 const MEMBERS = [
   {
     name: "James Webster",
     glyph: "電",
-    role: "Producer / Composer",
-    note: "Spearheaded the early .wmv mixtape series and has produced or co-produced the majority of the group's studio albums.",
-    pc: "oklch(0.70 0.23 352)",
+    role: "the .wmv architect",
+    note: "Drove the 2014 mixtape run that named the sound. Sole or co-producer across more of the catalogue than anyone — the group's most constant hand.",
+    pc: "var(--cyan)",
   },
   {
     name: "Tech Honors",
     glyph: "技",
-    role: "Producer / Composer",
-    note: "Sole producer of CLASSROOM SEXXTAPE (2016) and several other releases. Drives the group's art-pop and hypnagogic direction.",
-    pc: "oklch(0.76 0.18 200)",
+    role: "the pop instinct",
+    note: "Behind CLASSROOM SEXXTAPE and much of the group's turn toward melody, art-pop and outright maximalism.",
+    pc: "var(--magenta)",
   },
   {
     name: "Keith Rankin",
     glyph: "爪",
-    role: "Producer (Giant Claw)",
-    note: "Also records as Giant Claw. Contributes primarily on collaborative productions, bringing fractured electronica sensibilities.",
-    pc: "oklch(0.85 0.17 95)",
+    role: "also records as Giant Claw",
+    note: "Brings the visual identity and a separate solo practice as Giant Claw. Mostly appears on the collaborative, fully-formed studio statements.",
+    pc: "var(--gold)",
   },
 ];
 
 export default function About({ navigate }) {
   const { artist, albums } = useData();
+  const ref = useReveal();
 
   const byYear = useMemo(() => {
     const m = {};
-    (albums || []).forEach((a) => { if (a.year) m[a.year] = (m[a.year] || 0) + 1; });
-    return m;
+    (albums || []).forEach((a) => {
+      const y = (a.firstReleaseDate || "").slice(0, 4);
+      if (/^\d{4}$/.test(y)) m[y] = (m[y] || 0) + 1;
+    });
+    const years = Object.keys(m).sort();
+    const max = Math.max(1, ...Object.values(m));
+    return { years, m, max };
   }, [albums]);
-  const years = Object.keys(byYear).sort();
-  const maxCount = Math.max(1, ...Object.values(byYear));
 
-  const tags = useMemo(() => (artist?.tags || []).sort((a, b) => b.count - a.count).slice(0, 40), [artist]);
-  const links = useMemo(() => (artist?.relations || []).filter((r) => r.url), [artist]);
+  const tags = useMemo(() => (artist?.tags || [])
+    .filter((t) => t.name && !/sillyname|file\/path/.test(t.name))
+    .sort((a, b) => b.count - a.count), [artist]);
+  const links = useMemo(() => (artist?.relations || [])
+    .filter((r) => r.url && ["bandcamp","discogs","last.fm","wikidata","social network","streaming","free streaming"].includes(r.type))
+    .reduce((acc, r) => { if (!acc.some((x) => x.type === r.type)) acc.push(r); return acc; }, []), [artist]);
 
   const memberAlbumCounts = useMemo(() => {
     const m = {};
@@ -48,91 +57,76 @@ export default function About({ navigate }) {
   }, [albums]);
 
   return (
-    <main>
+    <main ref={ref}>
       <div className="wrap about">
-        <div className="about-hero">
-          <div className="kicker">The Collective</div>
-          <h1 className="about-title">death's<br />dynamic<br />shroud</h1>
-          <p className="about-lead">
-            Architects of vaporwave, hypnagogic pop, and digital hauntology since 2012.
+        <div className="about-hero fade-up">
+          <div className="kicker">THE COLLECTIVE — DAYTON, OHIO · <span style={{ color: "var(--magenta)" }}>EST. 2014</span></div>
+          <h1 className="about-title">death&rsquo;s<br />dynamic<br /><span className="chrome-text">shroud</span></h1>
+          <p className="about-lead serif">
+            Three producers turning the wreckage of digital nostalgia into something monumental.
           </p>
         </div>
 
-        <div className="about-body">
+        <div className="about-body fade-up">
           <div>
-            <p>
-              <em>death's dynamic shroud</em> is an American music collective from Dayton, Ohio, formed around 2012.
-              Operating at the intersection of vaporwave, hypnagogic pop, and art electronics, the trio has built
-              one of the most expansive discographies in contemporary internet music.
-            </p>
-            <p>
-              Their work spans lo-fi Windows 95 aesthetics, classical sampling, bedroom pop production,
-              and elaborate ambient architecture — often within a single release.
-            </p>
+            <p>Formed in 2014 as <em>death&rsquo;s dynamic shroud.wmv</em>, the group emerged from the
+              deepest end of the vaporwave underground — chopping pop songs, anime soundtracks and
+              forgotten software into dense, emotional collages.</p>
+            <p>What began as a flood of <em>.wmv</em> mixtapes hardened into a singular body of work.
+              Their 2015 statement <em>I&rsquo;ll Try Living Like This</em> is now widely regarded as one
+              of the defining records the genre ever produced.</p>
           </div>
           <div>
-            <p>
-              James Webster, Tech Honors, and Keith Rankin have worked both collaboratively and independently,
-              releasing under the aliases death's dynamic shroud, death's dynamic shroud.wmv, and 死's Dynamic Shroud.
-            </p>
-            <p>
-              Keith Rankin also maintains a separate profile as <em>Giant Claw</em>, releasing experimental
-              electronic music that shares aesthetic DNA with the collective's output.
-            </p>
+            <p>Rather than disappear, they accelerated. The trio has since pushed from plunderphonics
+              into glitch, ambient, hyperpop and outright maximalist electronic music — releasing a
+              new transmission, most months, for over a decade.</p>
+            <p>The ongoing <em>NUWRLD MIXTAPE CLUB</em> — a monthly subscription series — turned their
+              catalogue into one of the largest and most restless in the medium. This archive exists
+              to hold all <em>{albums?.length ?? "—"}</em> of those works in one place.</p>
           </div>
-        </div>
-
-        {/* Members */}
-        <div className="about-members">
-          {MEMBERS.map((m) => (
-            <div key={m.name} className="am-card" style={{ "--pc": m.pc }}>
-              <div className="am-glyph">{m.glyph}</div>
-              <div className="am-name">{m.name}</div>
-              <div className="am-role">{m.role}</div>
-              <p className="am-note">{m.note}</p>
-              {memberAlbumCounts[m.name] && (
-                <div className="am-tally">{memberAlbumCounts[m.name]} attributed releases</div>
-              )}
-            </div>
-          ))}
         </div>
 
         {/* Stats */}
-        <div className="about-stats">
+        <div className="about-stats fade-up">
           {[
-            { k: "Total Releases", v: albums?.length ?? "—" },
-            { k: "Studio Albums", v: (albums || []).filter((a) => a.category === "Studio Album").length },
-            { k: "Active Since", v: "2012" },
-            { k: "Origin", v: "Dayton, OH" },
+            { k: "Total works",   v: String(albums?.length ?? 0).padStart(3, "0") },
+            { k: "Studio albums", v: String((albums || []).filter((a) => a.category === "Studio Album").length).padStart(2, "0") },
+            { k: "Mixtape club",  v: String((albums || []).filter((a) => a.category === "NUWRLD Mixtape Club").length).padStart(2, "0") },
+            { k: "Architects",    v: "03" },
           ].map(({ k, v }) => (
             <div key={k} className="fact">
-              <span className="k">{k}</span>
-              <span className="v serif">{v}</span>
+              <div className="k">{k}</div>
+              <div className="v serif">{v}</div>
             </div>
           ))}
         </div>
 
-        {/* External links */}
-        {links.length > 0 && (
-          <div className="about-links">
-            {links.map((r) => (
-              <a key={r.url.resource} href={r.url.resource} target="_blank" rel="noreferrer">
-                {r.type}
-              </a>
-            ))}
-          </div>
-        )}
+        {/* Members */}
+        <div className="kicker" style={{ marginBottom: 24 }}>THE ARCHITECTS</div>
+        <div className="about-members fade-up">
+          {MEMBERS.map((m) => (
+            <div key={m.name} className="am-card" style={{ "--pc": m.pc }}>
+              <div className="am-glyph glyph-jp">{m.glyph}</div>
+              <div className="am-name">{m.name}</div>
+              <div className="am-role" style={{ color: m.pc }}>{m.role}</div>
+              <p className="am-note">{m.note}</p>
+              <div className="am-tally mono">
+                {memberAlbumCounts[m.name] ?? 0} credited works
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* Timeline */}
-        {years.length > 0 && (
-          <div className="about-timeline">
-            <div className="tl-head">Release Timeline</div>
+        {byYear.years.length > 0 && (
+          <div className="about-timeline fade-up">
+            <div className="kicker" style={{ marginBottom: 28 }}>RELEASE ACTIVITY — A DECADE OF SIGNAL</div>
             <div className="tl-bars">
-              {years.map((y) => (
-                <div key={y} className="tl-col">
-                  <span className="tl-n">{byYear[y]}</span>
-                  <div className="tl-bar" style={{ height: `${Math.round((byYear[y] / maxCount) * 160)}px` }} />
-                  <span className="tl-y">{y.slice(2)}</span>
+              {byYear.years.map((y) => (
+                <div key={y} className="tl-col" title={`${y}: ${byYear.m[y]} releases`}>
+                  <span className="tl-n mono">{byYear.m[y]}</span>
+                  <div className="tl-bar" style={{ height: `${Math.round((byYear.m[y] / byYear.max) * 160) + 6}px` }} />
+                  <span className="tl-y mono">{y.slice(2)}</span>
                 </div>
               ))}
             </div>
@@ -141,14 +135,14 @@ export default function About({ navigate }) {
 
         {/* Tag cloud */}
         {tags.length > 0 && (
-          <div className="about-tags">
-            <div className="tl-head" style={{ marginBottom: 24 }}>Genres &amp; Tags</div>
+          <div className="about-tags fade-up">
+            <div className="kicker" style={{ marginBottom: 24 }}>THE SIGNAL — GENRE &amp; TAGS</div>
             <div className="tagcloud">
               {tags.map((t) => (
                 <span
                   key={t.name}
                   className="tagword"
-                  style={{ fontSize: `${Math.max(14, Math.min(40, 14 + t.count * 2))}px` }}
+                  style={{ fontSize: `clamp(14px, ${0.9 + t.count * 0.5}vw, ${28 + t.count * 8}px)` }}
                 >
                   {t.name}
                 </span>
@@ -156,6 +150,26 @@ export default function About({ navigate }) {
             </div>
           </div>
         )}
+
+        {/* External links */}
+        {links.length > 0 && (
+          <div style={{ marginTop: 72 }}>
+            <div className="kicker" style={{ marginBottom: 18 }}>FIND THEM</div>
+            <div className="about-links">
+              {links.map((r) => (
+                <a key={r.url.resource} className="btn" href={r.url.resource} target="_blank" rel="noreferrer" data-hot="open ↗">
+                  {(r.type === "free streaming" ? "streaming" : r.type)} ↗
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div style={{ marginTop: 64, marginBottom: 40 }}>
+          <button className="btn solid" onClick={() => navigate("archive")} data-hot="enter">
+            Enter the Archive <span className="arr">→</span>
+          </button>
+        </div>
       </div>
     </main>
   );

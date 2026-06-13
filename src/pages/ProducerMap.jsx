@@ -6,9 +6,9 @@ const BASE = import.meta.env.BASE_URL;
 
 const CORE = ["James Webster", "Tech Honors", "Keith Rankin"];
 const MEMBERS = [
-  { name: "James Webster", glyph: "電", color: "var(--cyan)" },
-  { name: "Tech Honors",   glyph: "技", color: "var(--magenta)" },
-  { name: "Keith Rankin",  glyph: "爪", color: "var(--gold)" },
+  { name: "James Webster", glyph: "電", color: "var(--cyan)",     role: "the .wmv architect" },
+  { name: "Tech Honors",   glyph: "技", color: "var(--magenta)",  role: "the pop instinct" },
+  { name: "Keith Rankin",  glyph: "爪", color: "var(--gold)",     role: "also records as Giant Claw" },
 ];
 const PRODUCER_COLOR = {
   "James Webster": "var(--cyan)",
