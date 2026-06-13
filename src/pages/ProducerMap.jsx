@@ -168,8 +168,6 @@ export default function ProducerMap({ navigate }) {
   );
 
   const attributed = albums.filter((a) => a.producers);
-  const unattributed = albums.filter((a) => !a.producers);
-  const unattribCovered = unattributed.filter((a) => a.cover);
 
   return (
     <main ref={bodyRef}>
@@ -302,28 +300,6 @@ export default function ProducerMap({ navigate }) {
           )}
         </div>
 
-        <div className="venn-unattrib fade-up">
-          <div className="grp-head">
-            <h3>Unattributed</h3>
-            <span className="gc">{String(unattributed.length).padStart(2, "0")}</span>
-          </div>
-          <p className="sec-note" style={{ maxWidth: "60ch", marginBottom: 24 }}>
-            The deep archive — overwhelmingly the monthly{" "}
-            <b style={{ color: "var(--bone)" }}>NUWRLD MIXTAPE CLUB</b> — carries no structured
-            producer credit. {unattributed.length} works sit outside the map.
-          </p>
-          <div className="unattrib-mosaic">
-            {unattribCovered.slice(0, 22).map((a) => (
-              <div key={a.id} className="um-tile" onClick={() => navigate(`album/${a.id}`)}
-                title={a.title} data-hot>
-                <img src={coverUrl(a)} alt={a.title} loading="lazy" />
-              </div>
-            ))}
-            <button className="um-more" onClick={() => navigate("archive")} data-hot>
-              Browse all<br />in archive →
-            </button>
-          </div>
-        </div>
       </div>
     </main>
   );

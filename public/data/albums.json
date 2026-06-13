@@ -1113,7 +1113,10 @@
     "category": "Single",
     "year": "2015",
     "primaryGenre": "eccojams",
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -2257,40 +2260,6 @@
     "notes": null
   },
   {
-    "id": "26450b80-7329-4091-b5f6-40a07f764b2c",
-    "title": "♧♣︎*~*฿⋃⨢⨣⋵Ȑ⨏ḶȈ⋵§*~*♣︎♧ (hanahata Edit)",
-    "primaryType": "Single",
-    "secondaryTypes": [
-      "Remix"
-    ],
-    "firstReleaseDate": "2021-04-16",
-    "disambiguation": "",
-    "tags": [],
-    "genres": [],
-    "rating": {
-      "value": null,
-      "votes-count": 0
-    },
-    "releases": [
-      {
-        "id": "0b84b461-c25e-437d-bacd-1954180b3258",
-        "title": "♧♣︎*~*฿⋃⨢⨣⋵Ȑ⨏ḶȈ⋵§*~*♣︎♧ (hanahata Edit)",
-        "date": "2021-04-16",
-        "country": "XW",
-        "status": "Bootleg"
-      }
-    ],
-    "urls": [],
-    "cover": "26450b80-7329-4091-b5f6-40a07f764b2c.jpg",
-    "category": "Single",
-    "year": "2021",
-    "primaryGenre": null,
-    "producers": null,
-    "label": null,
-    "catno": null,
-    "notes": null
-  },
-  {
     "id": "efdee6d2-4000-46b6-99c1-4f797fa9a709",
     "title": "The Masterflan",
     "primaryType": "Album",
@@ -3204,7 +3173,11 @@
     "category": "Single",
     "year": "2022",
     "primaryGenre": "electronic",
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster",
+      "Keith Rankin"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -3714,7 +3687,11 @@
     "category": "Single",
     "year": "2022",
     "primaryGenre": "experimental",
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster",
+      "Keith Rankin"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -3848,7 +3825,11 @@
     "category": "Single",
     "year": "2022",
     "primaryGenre": "chillwave",
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster",
+      "Keith Rankin"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -3880,7 +3861,11 @@
     "category": "EP",
     "year": "2022",
     "primaryGenre": null,
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster",
+      "Keith Rankin"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -4213,7 +4198,9 @@
     "category": "NUWRLD Mixtape Club",
     "year": "2022",
     "primaryGenre": "experimental",
-    "producers": null,
+    "producers": [
+      "Various Artists"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -5294,7 +5281,11 @@
     "category": "Single",
     "year": "2023",
     "primaryGenre": "atmospheric drum and bass",
-    "producers": null,
+    "producers": [
+      "Tech Honors",
+      "James Webster",
+      "Keith Rankin"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -7021,7 +7012,9 @@
     "category": "EP",
     "year": "2024",
     "primaryGenre": null,
-    "producers": null,
+    "producers": [
+      "James Webster"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -7177,7 +7170,10 @@
     "category": "Single",
     "year": "2024",
     "primaryGenre": "ambient pop",
-    "producers": null,
+    "producers": [
+      "Keith Rankin",
+      "Tech Honors"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -8701,7 +8697,9 @@
     "category": "NUWRLD Mixtape Club",
     "year": "2026",
     "primaryGenre": null,
-    "producers": null,
+    "producers": [
+      "James Webster"
+    ],
     "label": null,
     "catno": null,
     "notes": null
@@ -8740,7 +8738,9 @@
     "category": "NUWRLD Mixtape Club",
     "year": "2026",
     "primaryGenre": null,
-    "producers": null,
+    "producers": [
+      "Tech Honors"
+    ],
     "label": null,
     "catno": null,
     "notes": null
