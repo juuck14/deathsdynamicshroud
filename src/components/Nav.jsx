@@ -6,7 +6,7 @@ const LINKS = [
   { path: "",           label: "Index" },
   { path: "archive",   label: "Archive" },
   { path: "producers", label: "Producers" },
-  { path: "collection",label: "Collection" },
+  // { path: "collection",label: "Collection" },
   { path: "about",     label: "Collective" },
 ];
 

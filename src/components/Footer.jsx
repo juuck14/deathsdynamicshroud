@@ -4,7 +4,7 @@ const NAV = [
   { path: "",           label: "Index" },
   { path: "archive",   label: "Full Archive" },
   { path: "producers", label: "Producer Map" },
-  { path: "collection",label: "Your Collection" },
+  // { path: "collection",label: "Your Collection" },
   { path: "about",     label: "The Collective" },
 ];
 
