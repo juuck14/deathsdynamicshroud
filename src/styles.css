@@ -501,10 +501,6 @@ body[data-cursor-hot] .cur-dot { background: var(--magenta); }
 }
 .arc-card:hover { border-color: var(--line-strong); background: var(--ink); }
 .arc-card.heard { border-color: color-mix(in oklch, var(--cyan), transparent 55%); }
-.arc-cap {
-  position: absolute; top: 10px; left: 10px; z-index: 3; mix-blend-mode: difference;
-  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; color: #fff;
-}
 .arc-listen { position: absolute; top: 8px; right: 8px; z-index: 3; }
 .arc-meta { padding: 12px 12px 14px; }
 .arc-name { font-size: 13.5px; font-weight: 600; line-height: 1.3; margin: 0 0 9px; word-break: break-word; }

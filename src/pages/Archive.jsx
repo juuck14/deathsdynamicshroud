@@ -140,7 +140,7 @@ export default function Archive({ navigate }) {
                   onClick={() => navigate(`album/${a.id}`)}
                   data-hot="open"
                 >
-                  <div className="arc-cap">{a._cat}</div>
+
                   <div className="arc-listen">
                     <ListenDot on={has(a.id)} onClick={(e) => { e.stopPropagation(); toggle(a.id); }} />
                   </div>

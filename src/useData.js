@@ -13,7 +13,6 @@ export function useData() {
       fetch(`${BASE}data/albums.json`).then((r) => r.json()),
     ]).then(([artist, rawAlbums]) => {
       const sorted = [...rawAlbums].sort((a, b) => (a.firstReleaseDate || "").localeCompare(b.firstReleaseDate || ""));
-      sorted.forEach((rec, i) => { rec._cat = "DDS-" + String(i + 1).padStart(3, "0"); });
       const albums = sorted;
       cache = { artist, albums };
       setData(cache);

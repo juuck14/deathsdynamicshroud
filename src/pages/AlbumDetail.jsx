@@ -58,7 +58,6 @@ export default function AlbumDetail({ id, navigate }) {
           <div className="album-cover">
             <GlitchCover album={album} eager />
             <div className="ac-meta">
-              <span>{album._cat}</span>
               <span>{album.cover ? "COVER ART ARCHIVE" : "NO ARTWORK"}</span>
             </div>
           </div>
@@ -76,7 +75,7 @@ export default function AlbumDetail({ id, navigate }) {
 
             <div className="album-facts">
               <div className="fact"><div className="k">Released</div><div className="v">{album.firstReleaseDate ? fmtDate(album.firstReleaseDate) : "—"}</div></div>
-              <div className="fact"><div className="k">Catalogue</div><div className="v serif">{album._cat || "—"}</div></div>
+
               <div className="fact"><div className="k">Format</div><div className="v">{album.category}</div></div>
               <div className="fact"><div className="k">Primary genre</div><div className="v">{album.primaryGenre || "—"}</div></div>
             </div>
